@@ -1,0 +1,11 @@
+Flask~=3.1.2.0
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Cors
+psycopg2-binary
+PyJWT
+Werkzeug
+gunicorn
+dotenv
+flask-jwt-extended
+python-dotenv
