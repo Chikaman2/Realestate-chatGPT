@@ -1,0 +1,10 @@
+steps:
+  # ... your existing build steps ...
+
+options:
+  # Increase timeout (e.g., to 20 minutes). Default is 10m.
+  timeout: '1200s'
+
+  # Increase Memory/CPU.
+  # 'E2_HIGHCPU_8' provides 8 vCPUs and usually resolves heavy compilation hangs.
+  machineType: 'E2_HIGHCPU_8'
