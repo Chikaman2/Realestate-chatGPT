@@ -6,25 +6,6 @@ auth_bp = Blueprint("auth", __name__, url_prefix="/api/auth")
 
 
 
-
-
-# SIGN-IN (LOGIN)
-@auth_bp.route("/login", methods=["POST"])
-def login():
-    data = request.json
-    user = User.query.filter_by(email=data.get("email")).first()
-
-    if not user or not user.check_password(data.get("password")):
-        return jsonify({"msg": "Invalid credentials"}), 401
-
-    token = create_access_token(identity=user.id)
-    return jsonify(access_token=token)
-
-
-
-
-
-
 @auth_bp.route("/login", methods=["POST"])
 def login():
     data = request.json
