@@ -1,2 +1,2 @@
 
-web: gunicorn run:app --bind :8080
+web: gunicorn -b 0.0.0.0:8080 main:app
